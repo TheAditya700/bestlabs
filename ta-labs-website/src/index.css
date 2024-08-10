@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ensure your CSS for scroll pane is defined here */
+.scroll-pane {
+  overflow-y: auto; /* Add vertical scroll */
+  max-height: 80vh; /* Limit height for scrolling */
+  padding-right: 10px; /* Space for scrollbar */
+}
+
+.container {
+  max-width: 1200px; /* Limit width for better readability */
+}
+
+/* Optional: Custom styles for the button */
+button {
+  font-weight: 600; /* Make button text bold */
+  padding: 10px 20px; /* Adjust padding */
+}
+
+/* Optional: Style the code snippets */
+.code-container {
+  background-color: #f5f5f5; /* Light background for code snippets */
+  border: 1px solid #ddd; /* Border to define edges */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Space inside the container */
+  overflow-x: auto; /* Horizontal scroll if needed */
+}
