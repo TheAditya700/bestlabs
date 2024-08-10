@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Hero from './Hero';
 import UnitSelector from './UnitSelector';
 import LabList from './LabList';
@@ -11,11 +11,17 @@ function MainPage() {
     const unit = units.find(unit => unit.id === unitId);
     setSelectedUnit(unit);
   };
+  
 
   return (
     <>
       <Hero />
-      <UnitSelector units={units} selectedUnit={selectedUnit} onSelectUnit={handleSelectUnit} />
+      <UnitSelector
+        units={units}
+        selectedUnit={selectedUnit}
+        onSelectUnit={handleSelectUnit}
+        ref={unitSelectorRef} // Pass the ref to UnitSelector
+      />
       <LabList labs={selectedUnit ? selectedUnit.labs : []} />
     </>
   );

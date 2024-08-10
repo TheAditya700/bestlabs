@@ -11,11 +11,11 @@ import shapeDetection from './imgs/shapeDetection.png';
 const Theory = ({ onLinkClick }) => (
   <div className="p-6">
     <h1 className="text-2xl font-bold mb-4">
-      <a href="#full" onClick={() => onLinkClick('full')}>Shape Detection Theory Explained</a>
+      <a href="#full" className="link-primary" onClick={() => onLinkClick('full')}>Shape Detection Theory Explained</a>
     </h1>
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
-      <a href="#grayscale" onClick={() => onLinkClick('grayscale')}>Grayscale</a>
+      <a href="#grayscale" className="link-primary" onClick={() => onLinkClick('grayscale')}>Grayscale</a>
     </h2>
     <p className="mb-4">
       A grayscale image is one where the color information has been removed, leaving only shades of gray. Each pixel in a grayscale image represents an intensity value between 0 (black) and 255 (white).
@@ -30,7 +30,7 @@ const Theory = ({ onLinkClick }) => (
     <img src={grayScale2} alt="Grayscale Example 2" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
-      <a href="#gaussianBlur" onClick={() => onLinkClick('gaussianBlur')}>Gaussian Blur</a>
+      <a href="#gaussianBlur" className="link-primary" onClick={() => onLinkClick('gaussianBlur')}>Gaussian Blur</a>
     </h2>
     <p className="mb-4">
       Gaussian blur is a smoothing filter that uses a Gaussian function to calculate the transformation to apply to each pixel in the image. It reduces noise and detail by averaging out the pixel values in a local neighborhood.
@@ -52,7 +52,7 @@ const Theory = ({ onLinkClick }) => (
     <img src={gaussianBlur3} alt="Gaussian Blur Example 3" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
-      <a href="#canny" onClick={() => onLinkClick('canny')}>Edge Detection (Canny)</a>
+      <a href="#canny" className="link-primary" onClick={() => onLinkClick('canny')}>Edge Detection (Canny)</a>
     </h2>
     <p className="mb-4">
       Edge detection is a technique used to identify points in an image where the brightness changes sharply, indicating the presence of edges. The Canny edge detection algorithm is a popular method that involves several steps, including noise reduction, gradient calculation, non-maximum suppression, and edge tracking by hysteresis.
@@ -63,7 +63,7 @@ const Theory = ({ onLinkClick }) => (
     <img src={canny1} alt="Canny Example" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
-      <a href="#contour" onClick={() => onLinkClick('contourDetect')}>Contour Detection and Approximation</a>
+      <a href="#contour" className="link-primary" onClick={() => onLinkClick('contourDetect')}>Contour Detection and Approximation</a>
     </h2>
     <p className="mb-4">
       Contours are useful for shape analysis and object detection and recognition. By finding contours, the algorithm can identify the outlines of shapes in the image, which is essential for further processing steps like shape approximation and classification. Uses edge detection as a precursor. The output is a list of contours, where each contour is a curve joining all the continuous points along a boundary with the same color or intensity.
@@ -77,7 +77,7 @@ const Theory = ({ onLinkClick }) => (
     <img src={contour1} alt="Contour Detection Example" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
-      <a href="#shapeDetection" onClick={() => onLinkClick('shape')}>Shape Detection</a>
+      <a href="#shapeDetection" className="link-primary" onClick={() => onLinkClick('shape')}>Shape Detection</a>
     </h2>
     <p className="mb-4">
       Shape detection involves identifying and classifying different shapes within an image. It often follows contour detection, where shapes are analyzed based on their contours. Techniques used include the Hough transform for detecting lines and circles, and shape approximation for identifying polygons.

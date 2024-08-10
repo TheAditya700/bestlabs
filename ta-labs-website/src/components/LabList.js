@@ -1,29 +1,37 @@
 import React from 'react';
 
-function LabList({ labs, onSelectLab }) {
-  if (!labs.length) {
-    return <p className="text-center text-gray-500">No labs available for the selected unit.</p>;
-  }
+function LabList({ labs, selectedUnit, onSelectLab }) {
+    if (!labs.length) {
+        return <p className="text-center text-gray-500">Please select a unit.</p>;
+    }
 
-  return (
-    <section id="labs" className="container mx-auto py-20">
-      <h2 className="text-3xl font-bold text-center mb-12">Available Labs</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {labs.map(lab => (
-          <div key={lab.id} className="bg-white p-6 rounded shadow-md hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-2xl font-bold mb-2">{lab.name}</h3>
-            <p className="text-gray-600 mb-4">{lab.description}</p>
-            <button 
-              onClick={() => onSelectLab(lab.id)} 
-              className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
-            >
-              Learn More
-            </button>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
+    return (
+        <div className="bg-[#f0f1f2] -mx-4"> {/* Apply background color with negative margin */}
+            <section id="labs" className="container mx-auto py-4 px-4"> {/* Keep original padding */}
+                {selectedUnit && (
+                    <div className="mb-12 text-center">
+                        <h2 className="text-4xl font-bold mb-4">Unit {selectedUnit.id}</h2>
+                        <p className="text-xl text-gray-700 mb-8">{selectedUnit.description}</p>
+                        <h3 className="text-3xl font-bold mb-8">Available Labs</h3>
+                    </div>
+                )}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {labs.map(lab => (
+                        <div key={lab.id} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <h3 className="text-2xl font-bold mb-3">{lab.name}</h3>
+                            <p className="text-gray-700 mb-4">{lab.description}</p>
+                            <button
+                                onClick={() => onSelectLab(lab.id)}
+                                className="text-blue-600 hover:text-blue-800 transition-colors duration-300 font-semibold"
+                            >
+                                Learn More
+                            </button>
+                        </div>
+                    ))}
+                </div>
+            </section>
+        </div>
+    );
 }
 
 export default LabList;

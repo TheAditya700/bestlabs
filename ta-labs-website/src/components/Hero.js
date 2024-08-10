@@ -1,15 +1,22 @@
 import React from 'react';
+import Typical from 'react-typical';
 
 function Hero() {
-  return (
-    <section className="bg-blue-600 text-white py-20">
-      <div className="container mx-auto text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to the TA Labs</h1>
-        <p className="text-lg mb-6">Explore the labs and learn more about each experiment</p>
-        <a href="#labs" className="bg-white text-blue-600 px-4 py-2 rounded hover:bg-gray-100 transition-colors duration-300">View Labs</a>
-      </div>
-    </section>
-  );
+    return (
+        <section className="min-h-[60vh] flex items-center justify-center bg-[#d0e0f0] text-primary py-12">
+            <div className="text-start max-w-4xl mx-auto">
+                <Typical
+                    steps={[
+                        'Artificial Intelligence Lab Portal.',
+                        1000, // Delay after typing
+                    ]}
+                    loop={1}
+                    wrapper="h1"
+                    className="text-5xl md:text-7xl lg:text-9xl font-bold leading-tight"
+                />
+            </div>
+        </section>
+    );
 }
 
 export default Hero;

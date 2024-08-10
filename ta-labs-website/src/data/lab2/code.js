@@ -1,8 +1,7 @@
 // Define all your code snippets here with languages
 const codeSnippets = {
   full: {
-    code: `
-import cv2
+    code: `import cv2
 
 # Attempt to use the DirectShow backend for capturing video on Windows
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
@@ -38,29 +37,25 @@ finally:
     language: 'python'
   },
   grayscale: {
-    code: `
-# Convert the frame to grayscale
+    code: `# Convert the frame to grayscale
 gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     `,
     language: 'python'
   },
   gaussianBlur: {
-    code: `
-# Apply GaussianBlur to reduce noise and improve contour detection
+    code: `# Apply GaussianBlur to reduce noise and improve contour detection
 blurred = cv2.GaussianBlur(gray, (5, 5), 0)
     `,
     language: 'python'
   },
   canny: {
-    code: `
-# Detect edges using Canny
+    code: `# Detect edges using Canny
 edged = cv2.Canny(blurred, 30, 100)  # Adjusted thresholds for Canny
     `,
     language: 'python'
   },
   contourDetect: {
-    code: `
-# Find contours in the edged image
+    code: `# Find contours in the edged image
 contours, _ = cv2.findContours(edged, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
 for contour in contours:
@@ -73,8 +68,7 @@ for contour in contours:
     language: 'python'
   },
   shape: {
-    code: `
-# Draw the contour and the name of the shape on the image
+    code: `# Draw the contour and the name of the shape on the image
     cv2.drawContours(frame, [approx], -1, (0, 255, 0), 2);
     M = cv2.moments(contour);
     if M["m00"] != 0:

@@ -1,27 +1,21 @@
 import React from 'react';
+import pesLogo from '../logos/peslogo.png';
+import bajajLogo from '../logos/Bajaj-Motorcycles-Logo.png';
 
 function Header({ onLabsClick }) {
   return (
-    <header className="bg-white shadow-md py-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          <img src="path-to-university-logo.png" alt="University Logo" className="h-12 mr-4" />
-          <img src="path-to-bajaj-logo.png" alt="Bajaj Logo" className="h-12" />
+    <header className="relative bg-white shadow-md py-4">
+      <div className="container mx-auto flex items-center justify-between relative">
+        {/* University Logo */}
+        <img src={pesLogo} alt="University Logo" className="h-12" />
+
+        {/* Centered Text */}
+        <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 flex justify-center">
+          <span className="text-xl font-semibold text-[#002d74]">Bajaj Engineering Skills Training</span>
         </div>
-        <nav>
-          <ul className="flex space-x-6 text-lg">
-            <li>
-              <button 
-                onClick={onLabsClick} 
-                className="text-gray-700 hover:text-blue-600 transition-colors duration-300"
-              >
-                Labs
-              </button>
-            </li>
-            <li><a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">About</a></li>
-            <li><a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact</a></li>
-          </ul>
-        </nav>
+
+        {/* Bajaj Logo */}
+        <img src={bajajLogo} alt="Bajaj Logo" className="h-12" />
       </div>
     </header>
   );
