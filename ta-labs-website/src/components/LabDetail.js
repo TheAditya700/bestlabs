@@ -8,12 +8,12 @@ function LabDetail({ lab, unit, onBack }) {
 
   useEffect(() => {
     // Dynamically import the Theory component
-    import(`../data/lab${lab.id}/theory.jsx`)
+    import(`../data/unit${unit.id}/lab${lab.id}/theory.jsx`)
       .then(module => setTheory(() => module.default))
       .catch(err => console.error('Failed to load theory content', err));
 
     // Dynamically import the CodePane component
-    import(`../data/lab${lab.id}/codepane.js`)
+    import(`../data/unit${unit.id}/lab${lab.id}/codepane.js`)
       .then(module => setCodePane(() => module.default))
       .catch(err => console.error('Failed to load code pane component', err));
 
@@ -21,13 +21,13 @@ function LabDetail({ lab, unit, onBack }) {
     fetch('/data/runnableCodeLinks.json')
       .then(response => response.json())
       .then(data => {
-        setRunnableCodeLink(data[`lab${lab.id}`]);
+        setRunnableCodeLink(data[`unit${unit.id}`][`lab${lab.id}`]);
       })
       .catch(err => console.error('Failed to load runnable code links', err));
-      console.log(runnableCodeLink)
+
     // Scroll to top on page load
     window.scrollTo(0, 0);
-  }, [lab]);
+  }, [lab, unit]);
 
   const handleLinkClick = (snippet) => {
     setSelectedSnippet(snippet);

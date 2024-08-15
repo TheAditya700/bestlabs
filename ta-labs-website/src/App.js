@@ -5,6 +5,8 @@ import UnitSelector from './components/UnitSelector';
 import LabList from './components/LabList';
 import LabDetail from './components/LabDetail'; // Component for individual lab pages
 import units from './data/units';
+import Lab1 from './data/unit1/lab1/lab1'
+import Footer from './components/Footer'
 
 function App() {
   const [selectedUnit, setSelectedUnit] = useState(null);
@@ -35,8 +37,13 @@ function App() {
           <LabList labs={selectedUnit ? selectedUnit.labs : []} onSelectLab={handleSelectLab} />
         </>
       ) : (
-        <LabDetail lab={selectedLab} unit={selectedUnit} onBack={() => setSelectedLab(null)} />
+        selectedUnit.id === 1 && selectedLab.id === 1 ? (
+          <Lab1 lab={selectedLab} unit={selectedUnit} onBack={() => setSelectedLab(null)} />
+        ) : (
+          <LabDetail lab={selectedLab} unit={selectedUnit} onBack={() => setSelectedLab(null)} />
+        )
       )}
+      <Footer/>
     </div>
   );
 }

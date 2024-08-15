@@ -2,7 +2,11 @@ import React from 'react';
 
 function LabList({ labs, selectedUnit, onSelectLab }) {
     if (!labs.length) {
-        return <p className="text-center text-gray-500">Please select a unit.</p>;
+        return (<div>
+            <p className="text-center text-gray-500">Please select a unit.</p>
+            <br/>
+        </div>
+        );
     }
 
     return (

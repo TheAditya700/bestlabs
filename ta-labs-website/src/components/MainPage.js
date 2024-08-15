@@ -11,7 +11,6 @@ function MainPage() {
     const unit = units.find(unit => unit.id === unitId);
     setSelectedUnit(unit);
   };
-  
 
   return (
     <>
@@ -20,9 +19,8 @@ function MainPage() {
         units={units}
         selectedUnit={selectedUnit}
         onSelectUnit={handleSelectUnit}
-        ref={unitSelectorRef} // Pass the ref to UnitSelector
       />
-      <LabList labs={selectedUnit ? selectedUnit.labs : []} />
+      <LabList unit={selectedUnit} labs={selectedUnit ? selectedUnit.labs : []} />
     </>
   );
 }
