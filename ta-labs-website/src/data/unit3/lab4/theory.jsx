@@ -8,7 +8,6 @@ import Img6 from './imgs/image6.png';
 import Img7 from './imgs/image7.png';
 import Img8 from './imgs/image8.png';
 import Img9 from './imgs/image9.png';
-import Img10 from './imgs/image10.png';
 import Img11 from './imgs/image11.png';
 import Img12 from './imgs/image12.png';
 import Img13 from './imgs/image13.png';

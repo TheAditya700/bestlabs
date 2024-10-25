@@ -23,8 +23,8 @@ const Lab2 = ({ onLinkClick }) => (
       <strong>Yellow Objects:</strong> Classified as "Warm" <br />
       <strong>Other Colors:</strong> Classified as "Unknown"
     </p>
-    <img src={Img1} alt="Image 1" className="w-4/5 mx-auto my-4 p-2" />
-    <img src={Img2} alt="Image 2" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img1} alt="1" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img2} alt="2" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
       <a href="#color" className="link-primary" onClick={() => onLinkClick('color')}>Step 2: Using OpenCV to Capture Images and Detect Objects' Colors</a>
@@ -35,8 +35,8 @@ const Lab2 = ({ onLinkClick }) => (
     <p className="mb-4">
       Apply the rules to the detected objects and print out the classification.
     </p>
-    <img src={Img4} alt="Image 4" className="w-4/5 mx-auto my-4 p-2" />
-    <img src={Img5} alt="Image 5" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img4} alt="4" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img5} alt="5" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
       <a href="#hsv" className="link-primary" onClick={() => onLinkClick('hsv')}>Step 3: Convert Image from BGR to HSV Color Space</a>

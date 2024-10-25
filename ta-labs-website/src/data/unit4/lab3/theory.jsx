@@ -1,6 +1,4 @@
 import React from 'react';
-import Img1 from './imgs/image1.png';
-import Img2 from './imgs/image2.png';
 import Img3 from './imgs/image3.png';
 
 const Theory = ({ onLinkClick }) => (
@@ -80,7 +78,7 @@ const Theory = ({ onLinkClick }) => (
       We can run this block if we intend to make new intents and remove the previous ones. In addition, the <code>delete_all_intents()</code> function ensures that you can start from a clean slate by deleting all existing intents in the Dialogflow agent. This is useful for resetting the agent during development and testing.
     </p>
 
-    <img src={Img3} alt="Image 3" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img3} alt="3" className="w-4/5 mx-auto my-4 p-2" />
   </div>
 );
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Img1 from './imgs/image1.jpg';
 import Img2 from './imgs/image2.jpg';
 import Img3 from './imgs/image3.jpg';
 import Img4 from './imgs/image4.jpg';
@@ -27,7 +26,7 @@ const Lab2 = ({ onLinkClick }) => (
       Connect the anode (longer leg) of the LED to a 220-ohm resistor. Connect the other end of the resistor to digital pin 7 on the Arduino.
       Connect the cathode (shorter leg) of the LED to the ground (GND) pin on the Arduino.
     </p>
-    <img src={Img3} alt="Image 3" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img3} alt="3" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
       <a href="#install_libraries" className="link-primary" onClick={() => onLinkClick('microphone')}>Install Python Libraries and Set Up Microphone</a>
@@ -44,7 +43,7 @@ const Lab2 = ({ onLinkClick }) => (
         <li><b>time:</b> Provides various time-related functions.</li>
       </ul>
     </p>
-    <img src={Img4} alt="Image 4" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img4} alt="4" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
       <a href="#microphone_input" className="link-primary" onClick={() => onLinkClick('microphone')}>Microphone Input</a>
@@ -62,7 +61,7 @@ const Lab2 = ({ onLinkClick }) => (
       The <code>recognizer.recognize_google</code> function sends the captured audio to Google’s speech recognition API,
       which uses advanced DNNs and probabilistic models to transcribe the speech to text.
     </p>
-    <img src={Img4} alt="Image 4" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img4} alt="4" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
       <a href="#arduino_code" className="link-primary" onClick={() => onLinkClick('arduino_code')}>Arduino Code and Serial Communication</a>

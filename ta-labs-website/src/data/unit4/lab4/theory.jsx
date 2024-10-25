@@ -28,7 +28,7 @@ const Lab2 = ({ onLinkClick }) => (
         <li>Customization: Allows customization of models for specific tasks and datasets.</li>
       </ul>
     </p>
-    <img src={Img1} alt="Image 1" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img1} alt="1" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
       <a href="#flask" className="link-primary" onClick={() => onLinkClick('Flask')}>Overview of Flask</a>
@@ -48,7 +48,7 @@ const Lab2 = ({ onLinkClick }) => (
         <li>RESTful Support: Well-suited for creating APIs that can handle RESTful requests.</li>
       </ul>
     </p>
-    <img src={Img2} alt="Image 2" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img2} alt="2" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
       <a href="#restful" className="link-primary" onClick={() => onLinkClick('RESTful')}>Overview of RESTful APIs</a>
@@ -66,7 +66,7 @@ const Lab2 = ({ onLinkClick }) => (
         <li>Hypermedia Driven: Clients interact with the server via hyperlinks provided dynamically by server responses.</li>
       </ul>
     </p>
-    <img src={Img3} alt="Image 3" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img3} alt="3" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
       <a href="#http_methods" className="link-primary" onClick={() => onLinkClick('RESTful')}>HTTP Methods in RESTful APIs</a>
@@ -81,7 +81,7 @@ const Lab2 = ({ onLinkClick }) => (
         <li>PATCH: Makes partial updates to existing information on the server.</li>
       </ul>
     </p>
-    <img src={Img4} alt="Image 4" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img4} alt="4" className="w-4/5 mx-auto my-4 p-2" />
 
     <h2 className="text-xl font-semibold mt-6 mb-2">
       <a href="#use_case" className="link-primary" onClick={() => onLinkClick('RESTful')}>Example Use Case of RESTful APIs</a>

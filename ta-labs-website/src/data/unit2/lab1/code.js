@@ -11,7 +11,7 @@ parent(james, mark).
 parent(anjali, kavya).
 
 % Rule: Siblings are people who share the same parent
-sibling(X, Y) :- parent(Z, X), parent(Z, Y), X \= Y.
+sibling(X, Y) :- parent(Z, X), parent(Z, Y), X \\= Y.
 
 % Rule: An ancestor is either a parent or someone who is a parent of an ancestor
 ancestor(X, Y) :- parent(X, Y).
@@ -44,7 +44,7 @@ parent(anjali, kavya).`,
     
     rules: {
         code: `% Rule: Siblings are people who share the same parent
-sibling(X, Y) :- parent(Z, X), parent(Z, Y), X \= Y.
+sibling(X, Y) :- parent(Z, X), parent(Z, Y), X \\= Y.
 
 % Rule: An ancestor is either a parent or someone who is a parent of an ancestor
 ancestor(X, Y) :- parent(X, Y).

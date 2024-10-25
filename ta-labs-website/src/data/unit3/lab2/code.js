@@ -247,17 +247,6 @@ const codeSections = {
   plt.show()`,
   language: 'python'
     },
-    elbow: {
-      code: `# plot an elbow graph
-  
-  sns.set()
-  plt.plot(range(1,11), wcss)
-  plt.title('The Elbow Point Graph')
-  plt.xlabel('Number of Clusters')
-  plt.ylabel('WCSS')
-  plt.show()`,
-  language: 'python'
-    },
     clustering: {
       code: `# finding wcss value for different number of clusters
   

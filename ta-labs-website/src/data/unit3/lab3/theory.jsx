@@ -103,9 +103,9 @@ const Theory = ({ onLinkClick }) => (
     <h2 className="text-xl font-semibold mt-6 mb-2">
       Images of Output
     </h2>
-    <img src={Img4} alt="Output Image 1" className="w-4/5 mx-auto my-4 p-2" />
-    <img src={Img5} alt="Output Image 2" className="w-4/5 mx-auto my-4 p-2" />
-    <img src={Img6} alt="Output Image 3" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img4} alt="Output 1" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img5} alt="Output 2" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img6} alt="Output 3" className="w-4/5 mx-auto my-4 p-2" />
   </div>
 );
 

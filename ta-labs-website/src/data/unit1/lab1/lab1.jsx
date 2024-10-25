@@ -1,20 +1,12 @@
-import React, { useEffect, useState, Suspense } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import Lab1 from './lab1content.jsx';  // Import Lab1 component
 
 function LabDetail({ lab, unit, onBack }) {
-  const [Theory, setTheory] = useState(null);
-  const [CodePane, setCodePane] = useState(null);
-  const [selectedSnippet, setSelectedSnippet] = useState('full'); // Default to 'full'
-  const [runnableCodeLink, setRunnableCodeLink] = useState('');
 
   useEffect(() => {
     // Scroll to top on page load
     window.scrollTo(0, 0);
   }, [lab, unit]);
-
-  const handleLinkClick = (snippet) => {
-    setSelectedSnippet(snippet);
-  };
 
   return (
     <div className="bg-[#f0f1f2] -mx-4">

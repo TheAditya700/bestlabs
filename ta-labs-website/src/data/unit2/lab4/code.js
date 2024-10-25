@@ -21,15 +21,15 @@ primary_problem(exhaust_issue) :- symptom(smoke_from_exhaust), symptom(strange_e
 
 % Cooling System Failure Causes
 cause(broken_coolant_fan) :- primary_problem(coolant_system_failure), symptom(engine_overheating).
-cause(blocked_radiator) :- primary_problem(coolant_system_failure), \+ symptom(smoke_from_exhaust).
+cause(blocked_radiator) :- primary_problem(coolant_system_failure), \\+ symptom(smoke_from_exhaust).
 
 % Fuel System Issue Causes
 cause(clogged_fuel_filter) :- primary_problem(fuel_system_issue), symptom(poor_fuel_efficiency).
-cause(fuel_pump_failure) :- primary_problem(fuel_system_issue), \+ symptom(poor_fuel_efficiency).
+cause(fuel_pump_failure) :- primary_problem(fuel_system_issue), \\+ symptom(poor_fuel_efficiency).
 
 % Ignition System Issue Causes
 cause(faulty_spark_plugs) :- primary_problem(ignition_system_issue).
-cause(ignition_coil_failure) :- primary_problem(ignition_system_issue), \+ symptom(smoke_from_exhaust).
+cause(ignition_coil_failure) :- primary_problem(ignition_system_issue), \\+ symptom(smoke_from_exhaust).
 
 % Exhaust System Issue Causes
 cause(broken_exhaust_pipe) :- primary_problem(exhaust_issue), symptom(smoke_from_exhaust).
@@ -85,15 +85,15 @@ primary_problem(exhaust_issue) :- symptom(smoke_from_exhaust), symptom(strange_e
 
 % Cooling System Failure Causes
 cause(broken_coolant_fan) :- primary_problem(coolant_system_failure), symptom(engine_overheating).
-cause(blocked_radiator) :- primary_problem(coolant_system_failure), \+ symptom(smoke_from_exhaust).
+cause(blocked_radiator) :- primary_problem(coolant_system_failure), \\+ symptom(smoke_from_exhaust).
 
 % Fuel System Issue Causes
 cause(clogged_fuel_filter) :- primary_problem(fuel_system_issue), symptom(poor_fuel_efficiency).
-cause(fuel_pump_failure) :- primary_problem(fuel_system_issue), \+ symptom(poor_fuel_efficiency).
+cause(fuel_pump_failure) :- primary_problem(fuel_system_issue), \\+ symptom(poor_fuel_efficiency).
 
 % Ignition System Issue Causes
 cause(faulty_spark_plugs) :- primary_problem(ignition_system_issue).
-cause(ignition_coil_failure) :- primary_problem(ignition_system_issue), \+ symptom(smoke_from_exhaust).
+cause(ignition_coil_failure) :- primary_problem(ignition_system_issue), \\+ symptom(smoke_from_exhaust).
 
 % Exhaust System Issue Causes
 cause(broken_exhaust_pipe) :- primary_problem(exhaust_issue), symptom(smoke_from_exhaust).
