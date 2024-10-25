@@ -86,7 +86,7 @@ const Lab2 = ({ onLinkClick }) => (
       HMMs are used to model the sequence of speech sounds, while DNNs are used for acoustic modeling,
       converting audio signals into phonetic representations.
     </p>
-    <img src={Img2} alt="Image 2" className="w-4/5 mx-auto my-4 p-2" />
+    <img src={Img2} alt="2" className="w-4/5 mx-auto my-4 p-2" />
 
     <br />
     <p><b>Conclusion:</b> This experiment demonstrates how to create a voice-controlled system using Python and Arduino to switch an LED on and off.</p> <br />
