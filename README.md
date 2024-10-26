@@ -1,4 +1,4 @@
-# BEST AI Tools and Problem Solving Project
+# BEST AI Labs
 
 This project is developed as part of the **BEST** (Bajaj Engineering Skills Training) program to introduce students to AI tools, problem-solving techniques, and practical applications. The labs focus on applying AI and machine learning in industrial contexts, providing hands-on experience with various tools, algorithms, and models.
 
