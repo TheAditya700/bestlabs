@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# BEST AI Tools and Problem Solving Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is developed as part of the **BEST** (Bajaj Engineering Skills Training) program to introduce students to AI tools, problem-solving techniques, and practical applications. The labs focus on applying AI and machine learning in industrial contexts, providing hands-on experience with various tools, algorithms, and models.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+This repository contains a series of labs designed to guide students through key concepts in AI and machine learning, from setting up an AI development environment to building decision support systems. The project includes the following units and labs:
 
-### `npm start`
+### Unit 1: Introduction to AI and Its Industrial Applications
+- **Lab 1**: AI Dev Environment  
+  Setting up a development environment for AI and machine learning projects, including required tools and libraries.
+- **Lab 2**: Vision System Setup  
+  Installing and configuring a basic vision system for image capture and processing tasks.
+- **Lab 3**: Rule-Based System  
+  Implementing a rule-based system to automate decision-making based on predefined rules.
+- **Lab 4**: Defect Detection  
+  Using computer vision to identify and detect defects in manufacturing components.
+- **Lab 5**: Pattern Recognition  
+  Creating a model to recognize patterns within visual data for classification purposes.
+- **Lab 6**: Optimizing Defect Detection  
+  Enhancing defect detection using advanced algorithms and parameter optimization.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Unit 2: AI Tools and Problem Solving
+- **Lab 1**: Writing Basic PROLOG Queries  
+  Writing basic PROLOG queries to solve simple logic-based problems.
+- **Lab 2**: Prediction Model  
+  Creating a predictive model for inventory level forecasting.
+- **Lab 3**: Vision-Based Identification  
+  Developing a simple vision-based system for model identification using aim-oriented algorithms.
+- **Lab 4**: Small-Scale Expert System  
+  Developing a small-scale expert system using PROLOG for predefined problems.
+- **Lab 5**: Predictive Model for Machine Failure  
+  Creating a predictive model for forecasting machine failure using historical sensor data.
+- **Lab 6**: Decision Support System  
+  Implementing a decision support system for model identification incorporating rule-based reasoning.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Unit 3: Learning Algorithms and Sensor Integration
+- **Lab 1**: Supervised Learning Algorithm  
+  Implementing a supervised learning algorithm for classification or regression tasks.
+- **Lab 2**: Unsupervised Learning Model  
+  Developing an unsupervised learning model for clustering or anomaly detection.
+- **Lab 3**: Camera and Microphone Integration  
+  Integrating camera and microphone sensors with AI models for data capture and processing.
+- **Lab 4**: Predicting Machining Quality  
+  Using machine learning algorithms to predict machining quality based on sensor data.
+- **Lab 5**: Clustering Machine Sounds  
+  Applying clustering algorithms to classify and group machine sounds based on their patterns.
+- **Lab 6**: Multi-Sensor Integration  
+  Building a system that integrates multiple sensors for real-time data collection and analysis.
 
-### `npm test`
+### Unit 4: Expert Systems and Robotic Process Automation
+- **Lab 1**: Expert System for Decision Support  
+  Creating an expert system to provide decision support for industrial processes.
+- **Lab 2**: Voice-Activated System  
+  Developing a voice-activated system for hands-free operation.
+- **Lab 3**: Chatbot for FAQ  
+  Implementing a chatbot that answers frequently asked questions using AI-driven responses.
+- **Lab 4**: Chatbot for Customer Service  
+  Building a chatbot to handle customer service inquiries efficiently.
+- **Lab 5**: Voice Recognition System  
+  Creating a system that recognizes and interprets human speech for command execution.
+- **Lab 6**: Self-Diagnosing Machine  
+  Developing a machine with self-diagnosing capabilities to identify potential faults automatically.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Creators
 
-### `npm run build`
+- **Adit Acharya** (PES1UG22AM009)
+- **Aditya Hriday Rath** (PES1UG22AM013)
+- **Priyansh Gupta** (PES1UG22AM124)
+- **Priyansh Surana** (PES1UG22AM905)
+- **Pushkar NS** (PES1UG22AM919)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project is intended for educational purposes and serves as a part of the BEST training program.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Run the Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-repo-name.git
+   ```
 
-### `npm run eject`
+2. Navigate to the project directory:
+    ```bash
+   cd your-repo-name
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install the necessary dependencies:
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Start the local development server:
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This will launch the app in development mode. Open your browser and navigate to `http://localhost:3000` to view the project.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Step 5: Building the Project for Production
+To create a production-ready build of the project, run:
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This will compile the app into the `build` folder, ready for deployment.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Hosting Information
 
-### Code Splitting
+This project can be hosted on platforms like:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **GitHub Pages**: Ideal for hosting static websites. Simply push your code to a GitHub repository and enable GitHub Pages from the repository settings.
+- **Vercel**: Simple, free tier hosting with great features for React projects. It offers continuous deployment from GitHub.
+- **Netlify**: Another easy-to-use platform with automatic deployments from GitHub and features like forms and serverless functions.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contribute or modify the project as needed for your learning purposes.
