@@ -1,7 +1,7 @@
 const codeSections = {
     full: {
-      code: `# Install libraries if not already installed
-  !pip install tensorflow scikit-learn
+      code: `# Install necessary libraries
+  !pip install tensorflow scikit-learn google-cloud-dialogflow
   
   # Import libraries
   import numpy as np
@@ -15,6 +15,10 @@ const codeSections = {
   from sklearn.cluster import KMeans
   from sklearn.metrics import classification_report
   import matplotlib.pyplot as plt
+  from google.cloud import dialogflow_v2 as dialogflow
+  import os
+  import pandas as pd
+  import json
   
   # Define the path to your dataset
   dataset_path = '/kaggle/input/real-life-industrial-dataset-of-casting-product'
@@ -99,6 +103,127 @@ const codeSections = {
   plt.imshow(img)
   plt.axis('off')
   plt.show()
+  
+  # Set up Google Application Credentials for Dialogflow
+  json_key_path = '/kaggle/input/keysfile/peschatbot45-obnl-7909ed2abbff.json'
+  os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = json_key_path
+  
+  # Verify that the environment variable is set correctly
+  print(os.environ["GOOGLE_APPLICATION_CREDENTIALS"])
+  
+  # Initialize Dialogflow client
+  client = dialogflow.IntentsClient()
+  project_id = 'peschatbot45-obnl'
+  parent = f"projects/{project_id}/agent"
+  print(parent)
+  
+  # Function to get existing intents
+  def get_existing_intents():
+      intents = client.list_intents(request={"parent": parent})
+      return {intent.display_name: intent for intent in intents}
+  
+  # Get and print existing intents
+  existing_intents = get_existing_intents()
+  print("Existing Intents:", list(existing_intents.keys()))
+  
+  # FAQs data
+  faqs = [
+      {
+          "question": "What are your opening hours?",
+          "answers": [
+              "We are open from 9 AM to 5 PM, Monday to Friday.",
+              "Our business hours are from 9 AM to 5 PM, Monday to Friday."
+          ]
+      },
+      {
+          "question": "Where are you located?",
+          "answers": [
+              "We are located at 20 Ingram Street, Gotham opposite the Daily Planet.",
+              "You will find us opposite the Daily Planet at 120 Ingram Street, Gotham."
+          ]
+      },
+      {
+          "question": "How can I contact customer service?",
+          "answers": [
+              "You can contact customer service at (123) 456-7890 or email us at support@example.com.",
+              "For customer service call (123) 456-7890",
+              "Please email us at support@example.com."
+          ]
+      },
+      {
+          "question": "What is your return policy?",
+          "answers": [
+              "Our return policy allows returns within 30 days of purchase with a receipt.",
+              "If you have a receipt, you can return the items within 30 days of purchase as long they have not been used or damaged."
+          ]
+      }
+  ]
+  
+  # Create or update intents
+  for faq in faqs:
+      create_or_update_intent(faq["question"], [faq["question"]], faq["answers"], existing_intents)
+  
+  # Detect intents for sample queries
+  def detect_intent_texts(project_id, session_id, texts, language_code):
+      session_client = dialogflow.SessionsClient()
+      session = session_client.session_path(project_id, session_id)
+      
+      for text in texts:
+          text_input = dialogflow.types.TextInput(text=text, language_code=language_code)
+          query_input = dialogflow.types.QueryInput(text=text_input)
+          
+          response = session_client.detect_intent(session=session, query_input=query_input)
+          print(f"Query text: {response.query_result.query_text}")
+          print(f"Detected intent: {response.query_result.intent.display_name}")
+          print(f"Response text: {response.query_result.fulfillment_text}")
+          print("----------------------------------------------------------------")
+  
+  # Test queries
+  test_queries = [
+      "Hi", # This should trigger Welcome intent
+      "What are your opening hours?",
+      "Where are you located?",
+      "How can I contact customer service?",
+      "What is your return policy?",
+      "What is your email address?",  # This should trigger the fallback intent
+      "Do you offer discounts?"       # This should also trigger the fallback intent
+  ]
+  
+  detect_intent_texts(project_id, "unique_session_id", test_queries, "en")
+  
+  # Add training phrases to specific intent
+  intent_name = "What are your opening hours?"
+  additional_training_phrases = [
+      "When do you open?",
+      "What time do you start business?",
+      "Tell me your business hours.",
+  ]
+  
+  # Add new training phrases
+  create_or_update_intent(intent_name, additional_training_phrases, [], existing_intents)
+  
+  # Test the updated intent with a query
+  test_query = [
+      "What are your opening hours?",
+      "When do you open?",
+      "Tell me your business hours."
+  ]
+  
+  detect_intent_texts(project_id, "unique_session_id", test_query, "en")
+  
+  # Delete all intents function
+  def delete_all_intents():
+      intents = client.list_intents(request={"parent": parent})
+      for intent in intents:
+          client.delete_intent(request={"name": intent.name})
+      print("Deleted all intents.")
+  
+  # Delete all intents
+  delete_all_intents()
+  
+  # Verify deletion
+  existing_intents = get_existing_intents()
+  print("Existing Intents After Deletion:", existing_intents)
       `,
       language: "python",
     },
