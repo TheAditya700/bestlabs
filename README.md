@@ -2,6 +2,8 @@
 
 This project is developed as part of the **BEST** (Bajaj Engineering Skills Training) program to introduce students to AI tools, problem-solving techniques, and practical applications. The labs focus on applying AI and machine learning in industrial contexts, providing hands-on experience with various tools, algorithms, and models.
 
+## Currently hosted at: [https://best-ai-labs.pages.dev/]
+
 ## Project Overview
 
 This repository contains a series of labs designed to guide students through key concepts in AI and machine learning, from setting up an AI development environment to building decision support systems. The project includes the following units and labs:
